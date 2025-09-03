@@ -1,0 +1,43 @@
+.Footer{
+    margin-top: 110px;
+    background-color: #161C28;
+
+}
+
+.Footer h1{
+    color: #54BD95;
+    font-size:50px;
+}
+
+.Footer p{
+    color: #A6A6A6;
+    font-size: 18px;
+}
+
+.footer-title{
+    padding: 50px;
+}
+
+.footer-end{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.footer-container{
+    margin-left: 50px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-container input{
+    height: 60px;
+    width: 500px;
+    border-radius: 100px ;
+    background-color: #161C28;
+    border: #A6A6A6 solid;
+    color: #A6A6A6;
+    font-size: 20px;
+}
