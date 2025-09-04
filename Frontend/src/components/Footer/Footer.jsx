@@ -7,7 +7,11 @@ export const Footer = () => {
             <h1>Task.io</h1>
             <p>Get started now try our product</p>
             </div>
-            <input value="    Enter your Email"></input>
+            <div className="input">
+                <input placeholder="Enter your Email"/>
+                <button />
+            </div>
+            
         </div>
         
         <div className="footer-end">
