@@ -11,21 +11,34 @@ import java.util.List;
 public class TaskController {
 
   @Autowired
-  TaskService taskService =  new TaskService();
+  private TaskService taskService;
+
 
   @GetMapping("/api/tasks")
   public List<Task> getTask(){
     return taskService.getTasks();
   }
 
+
   @GetMapping("/api/task/{id}")
-  public Task getTaskById(@PathVariable int id){
+  public Task getTaskById(@PathVariable Long id){
     return taskService.getTaskById(id);
   }
+
 
   @PutMapping("/api/task")
   public String putTask(@RequestBody Task task){
     taskService.addTask(task);
     return "success";
+  }
+
+  @PostMapping("/api/task/{id}")
+  public String postTask(@PathVariable Long id,@RequestBody Task task){
+    return taskService.updateTask(id,task);
+  }
+
+  @DeleteMapping("/api/task/{id}")
+  public String deleteTask(@PathVariable Long id){
+    return taskService.deleteTask(id);
   }
 }

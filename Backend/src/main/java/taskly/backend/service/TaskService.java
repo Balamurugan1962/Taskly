@@ -1,7 +1,9 @@
 package taskly.backend.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import taskly.backend.model.Task;
+import taskly.backend.repository.TaskRepo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,28 +12,34 @@ import java.util.List;
 @Service
 public class TaskService {
 
-  private List<Task> tasks = new ArrayList<>();
-
-  public TaskService() {
-    tasks.add(new Task(0, "Meet Anjj", "Meet Anj and have a convo"));
-    tasks.add(new Task(1, "MPMC Assignment", "Do MPMC Assignment"));
-    tasks.add(new Task(2, "AI Assignment", "Do AI Assignment"));
-  }
+  @Autowired
+  TaskRepo taskRepo;
 
   public List<Task> getTasks() {
-    return tasks;
+    return taskRepo.findAll();
   }
 
-  public Task getTaskById(int Id){
-    for (Task task:tasks){
-      if(task.getId()==Id){
-        return task;
-      }
-    }
-    return null;
+  public Task getTaskById(Long Id){
+    return taskRepo.findById(Id).orElse(null);
   }
 
-  public void addTask(Task task) {
-    tasks.add(task);
+  public String addTask(Task task) {
+    taskRepo.save(task);
+    return "success";
+  }
+
+  public String updateTask(Long id,Task task){
+    Task existingTask = taskRepo.findById(id).orElse(new Task());
+
+    existingTask.setName(task.getName());
+    existingTask.setDescription(task.getDescription());
+
+    taskRepo.save(existingTask);
+    return "updated";
+  }
+
+  public String deleteTask(Long id){
+    taskRepo.deleteById(id);
+    return "deleted";
   }
 }
