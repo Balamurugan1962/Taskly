@@ -20,13 +20,9 @@ export const Home = () => {
             </p>
             <a href="#" className="GetStarted">Get Started</a>
           </div>
-        <img src={photo_bk} className="Photo-Banner" />
-        </div>
-        <div className="background-elements">
-          <img class="left-corner-blur" src={bk_green_blur} />
-          <img class="center-blur" src={bk_white_blur} />
-          <img class="top-right-blur" src={bk_pink_blur} />
-          <img src={bk_green_blur} className="bottom-right-blur" />
+          <div className="Photo">
+                <img src={photo_bk} className="Photo-Banner" />
+          </div>
         </div>
     </div>
   
