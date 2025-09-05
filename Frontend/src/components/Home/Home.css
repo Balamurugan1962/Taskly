@@ -35,9 +35,12 @@
     line-height: 25px;
 }
 
+
 .Photo-Banner{
-    width: 410px;
-    height: 526px;
+
+    width: 701.68px;
+    height: 558.99px;
+
     z-index: 1;
     border-radius: 10px;
 
@@ -49,47 +52,5 @@
     padding: 20px;
     border-radius: 50px;
     background-color: #52BD94;
-}
-
-.background-elements{
-    max-height: 1vh;
-    background-color: black;
-    pointer-events: none;   
-
-}
-.left-corner-blur{
-    opacity: 0.5;
-    width: 200%;
-    position: absolute;
-    z-index: -100;
-
-    margin: -150% 0% 0% -115%;
-}
-
-.top-right-blur{
-    opacity: 0.5;
-    width: 200%;
-    position: absolute;
-    z-index: -100;
-
-    margin: -150% 0% 0% -20%;  
-}
-
-.center-blur{
-    opacity: 0.5;
-    /* background-color: black; */
-    width: 200%;
-    position: absolute;
-    margin: -125% 0% 0% -60%;
-    z-index: -100;
-}
-
-.bottom-right-blur{
-    opacity: 0.5;
-    width: 200%;
-    position: absolute;
-    z-index: -100;
-
-    margin: -100% 0% 0% 0%;
 }
 

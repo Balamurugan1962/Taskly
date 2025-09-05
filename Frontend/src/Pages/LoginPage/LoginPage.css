@@ -1,0 +1,80 @@
+.login-main{
+    background-color: hsl(157 53 90);
+    font-family: Poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: black; */
+}
+.login-main form{
+    color: #344054;
+    border-radius: 15px;
+    gap: 10px;
+    padding: 50px;
+    padding-top: 20px;
+    background-color: white;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.login-main h1{
+    color: #101828;
+}
+
+.login-main input{
+    font-size: 20px;
+    border: #D0D5DD solid 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 50px;
+    border-radius: 10px;
+}
+.login-main button{
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FCFCFD;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 16px;
+    height: 50px;
+    border: none;
+    background: #30946D;
+    transition: background-color 0.1s ease;
+}
+
+.login-main .submit:hover{
+    background-color: hsl(157 53 90);
+    color: #30946D;
+}
+
+.login-main .google{
+    background-color: hsl(157 53 90);
+    color: #30946D;
+    transition: background-color 0.1s ease;
+}
+
+.login-main .google:hover{
+    background: #30946D;
+    color: #FCFCFD;
+
+}
+
+.login-main .Password{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-main #signup{
+    display: flex;
+    justify-content: center;
+}
+.login-main a{
+    color: #30946D;
+    font-weight: 500;
+}

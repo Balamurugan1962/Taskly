@@ -7,11 +7,9 @@ export const LandingPage = () => {
   return (
     <>
         <div className="LandingPage">
-
             <Header />
             <Home />
             <Footer />
-
         </div>
     </>
   )

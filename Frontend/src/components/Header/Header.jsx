@@ -14,8 +14,8 @@ export const Header = () => {
                     <a href="#">About</a>
                 </div>
                 <div className="GetIn">
-                    <a href="#" className="login">Login</a>
-                    <a href="#" className="signup">SignUp</a>
+                    <a href="login" className="login">Login</a>
+                    <a href="signup" className="signup">SignUp</a>
                 </div>
             </div>
             
