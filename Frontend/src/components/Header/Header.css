@@ -32,6 +32,10 @@
 .Nav a{
     color: #A6A6A6;
 }
+
+.login:hover{
+    color: #A6A6A6;
+}
 .Nav a:hover{
     color: black;
 } 
