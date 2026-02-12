@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-void: #050505;
+  --font-geist: "Geist Mono", monospace;
+  --color-surface: #0a0a0a;
+  --color-muted: #525252;
+  --color-subtle: #a3a3a3;
+  --color-text: #fafafa;
+  --color-accent: #6366f1;
+  --color-accent-hover: #818cf8;
+  --color-danger: #ef4444;
+  --color-danger-hover: #f87171;
+  --line-height: 1.5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --color-void: #050505;
+  --color-text: #fafafa;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-geist), "Inter", sans-serif;
+    font-size: 16px;
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtle);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes checkmark {
+  from {
+    stroke-dashoffset: 24;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.25s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
+.animate-checkmark {
+  animation: checkmark 0.25s ease-out forwards;
 }
